@@ -11,9 +11,9 @@ const Landing = () => {
             Create a caregiver profile/portfolio, share posts and get help from
             other caregivers
           </p>
-          <div clasName="buttons">
-            <Link to="/register" clasName="btn btn-primary">Sign Up</Link>
-            <Link to="/login" clasName="btn btn-light">Login</Link>
+          <div className="buttons">
+            <Link to="/register" className="btn btn-primary">Sign Up</Link>
+            <Link to="/login" className="btn btn-light">Login</Link>
           </div>
         </div>
       </div>
