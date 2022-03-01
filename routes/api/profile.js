@@ -3,6 +3,7 @@ const router = express.Router();
 const auth = require('../../middleware/auth');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
+const Post = require('../../models/Post');
 const { check, validationResult } = require('express-validator');
 // bring in normalize to give us a proper url, regardless of what user entered
 const normalize = require('normalize-url');
@@ -132,7 +133,8 @@ router.get('/user/:user_id', async (req, res) => {
 //acess private
 router.delete('/', auth, async (req, res) => {
     try {
-        //todo: remove post
+        //remove post
+        await Post.deleteMany({ user: req.user.id })
 
         //remove profile
         await Profile.findOneAndRemove({ user: req.user.id });
