@@ -12,7 +12,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
     useEffect(() => {
         getCurrentProfile();
         //useEffect only once
-    },[]);
+    },[getCurrentProfile]);
   return (
     <div>
         <section className='container'>
