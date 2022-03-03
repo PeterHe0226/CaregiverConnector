@@ -12,7 +12,7 @@ const Post = ({ post: { post, loading }, getPost }) => {
     const { id } = useParams();
     useEffect(() => {
         getPost(id);
-    }, [getPost]);
+    }, [getPost, id]);
 
   return (
     <section className="container">

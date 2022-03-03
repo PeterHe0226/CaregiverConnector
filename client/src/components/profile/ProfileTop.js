@@ -47,7 +47,7 @@ const ProfileTop = ({ profile }) => {
             )}
             
             {social && social.instagram && (
-                 <a href="#" target="_blank" rel="noopener noreferrer">
+                 <a href={social.instagram} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram fa-2x"></i>
             </a>
             )}
