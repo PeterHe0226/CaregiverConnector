@@ -7,10 +7,12 @@ const User = require('../../models/User');
 const gravatar = require('gravatar');
 //get encryption for password
 const bcrypt = require('bcryptjs');
+const normalize = require('normalize-url');
 //get jsonwebtoken
 const jwt = require('jsonwebtoken');
 //get secret key for jwt
 const config = require('config');
+
 
 
 //@route POST api/users
@@ -35,14 +37,16 @@ async (req, res) => {
             return res.status(400).json({ errors: [{ msg: 'This account already exists.' }] });
         }
     //Get user's gravatar
-        const avatar = gravatar.url(email, {
+    
+        const avatar = normalizeUrl(gravatar.url(email, {
             //size
             s: '200',
             //rating
             r: 'pg',
             //default
             d: 'mm'
-        });
+        }), { forceHttps: true }
+        );
         user = new User({
             name,
             email,
