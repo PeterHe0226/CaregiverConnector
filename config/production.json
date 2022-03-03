@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://peterhe:Peter0226@caregiverconnector.trwtn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "ConnectorSecretToken",
+    "githubClientId": "745a1605693338237764",
+    "githubSecret": "63e81d259f639bea1d99fda69106e02a0a38ee7d"
+}
