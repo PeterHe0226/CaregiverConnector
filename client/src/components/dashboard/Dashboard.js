@@ -22,7 +22,12 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
             </h1>
             <p className="lead">
                 <i className='fas fa-user'></i>{' '}
-                Welcome { user && user.name}
+                Welcome to CaregiverConnector!{' '}{ user && (
+                <Link to={`/profile/${user._id}`} className='btn-primary'>
+                   {user.name}
+                </Link>
+                )}
+                 
             </p>
             {profile !== null ? (<Fragment>
                 <DashboardActions />

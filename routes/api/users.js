@@ -38,7 +38,7 @@ async (req, res) => {
         }
     //Get user's gravatar
     
-        const avatar = normalizeUrl(gravatar.url(email, {
+        const avatar = normalize(gravatar.url(email, {
             //size
             s: '200',
             //rating
