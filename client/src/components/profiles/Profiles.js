@@ -13,7 +13,7 @@ const Profiles = ({ profile, getProfiles }) => {
   return (
     <Fragment>
       <section className='container'>
-      { profiles ===null || loading ? <Spinner /> : <Fragment>
+      { (loading || profiles === null) ? <Spinner /> : (<Fragment>
           <h1 className="large text-primary">Caregivers</h1>
           <p className="lead">
               <i className="fab fa-connectdevelop"></i> Browse and Connect with Caregivers
@@ -25,7 +25,7 @@ const Profiles = ({ profile, getProfiles }) => {
                   ))
               ) : <h4> No Profiles Found...</h4>}
           </div>
-          </Fragment>}
+          </Fragment>)}
         </section>
     </Fragment>
   )
